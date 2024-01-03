@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  min-height: 100vh;
+  background: #0c0c0c;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+.datetime{
+    color: #fff;
+    background: #1010c9;
+    font-family: "Segoe UI", sans-serif;
+    width: 700px;
+    padding: 15px 20px;
+    transition: 0.5s;
+    transition-property: all;
+    
+}
+
+.datetime:hover{
+    background: rgba(0,0,0,0.5);
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);;
+    border-radius: 5px;
+}
+
+.date{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    max-width: 0 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.time span:last-child{
+   
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+
+hr{
+    border: 2px solid  rgb(0, 0, 0);
+    margin: 20px auto;
+    background: #2f363e;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
+.setAlarm{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.column select{
+    background: #e4ea40;
+    color: #0d0d0d;
+    text-align: center;
+    padding: 8px 4px;
+    border: 2px solid rgba(0,0,0,0.25);
+    border-radius: 5px;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    
+}
+
+
+#btn-setAlarm, .btn-delete, #stopAlarm{
+    padding: 5px;
+    color: #090909;
+    background: #d2d2dc;
+    border: 2px solid rgba(0,0,0,0.25);
+    border-radius: 18px;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    
+}
+
+#stopAlarm{
+    visibility: hidden;
+    width: 100px;
+    margin: 0 34%;
+}
+
+.btn-delete{
+    margin-left: 50px;
+}
+
+#btn-setAlarm:hover, .btn-delete:hover, #stopAlarm:hover{
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+h3{
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.alarmList{
+    color: #fff;
+    margin: 14px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.alarmLog{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px auto;
+}
+
+
+
+
+.container{
+  position: relative;
+  background: #eb401a;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 250px;
+ 
+}
+
+
+/* digital clock style */
+
+#ytime {
+  width: 400px;
+  margin: 0 auto;
+  
+}
+
+#ytime div {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr);
+}
+
+#ytime div:nth-child(1)::after,
+#ytime div:nth-child(2)::after {
+  content: ':';
+  position: absolute;
+  right: -4px;
+}
+
+#ytime div:last-child {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#ytime div:nth-child(2)::after {
+  animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* Make Responsive */
+
+@media screen and (max-width: 768px) {
+    .container {
+      border-radius: 50px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      border-radius: 0;
+    }
+    
+   
+  }
+
+
+
